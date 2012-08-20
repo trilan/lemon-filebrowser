@@ -9,10 +9,8 @@
 {% block extrahead %}{{ block.super }}
   <script src="{% url admin:filebrowser:jsi18n %}" type="text/javascript" charset="utf-8"></script>
   <script type="text/javascript" charset="utf-8">
-  // <![CDATA[
     var path_to_yes_icon = '{% static "lemon/images/yes.gif" %}';
     var path_to_no_icon = '{% static "lemon/images/no.gif" %}';
-  // ]]>
   </script>
   <script src="{% static 'lemon/js/jquery.changelist.js' %}" type="text/javascript" charset="utf-8"></script>
   <script src="{% static 'filebrowser/js/jquery.browse.js' %}" type="text/javascript" charset="utf-8"></script>
