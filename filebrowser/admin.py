@@ -5,7 +5,7 @@ import lemon
 
 from time import gmtime, strftime, localtime, time
 
-from dajngo.contrib import messages
+from django.contrib import messages
 from django.core.exceptions import ImproperlyConfigured
 from django.core.paginator import Paginator, InvalidPage
 from django.core.urlresolvers import reverse
