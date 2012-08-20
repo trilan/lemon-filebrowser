@@ -195,7 +195,7 @@ class FileBrowserAdmin(lemon.AppAdmin):
             context_instance=RequestContext(request, current_app=self.admin_site.name))
 
     def mkdir_view(self, request):
-        from lemon.filebrowser.forms import MakeDirForm
+        from .forms import MakeDirForm
 
         query = request.GET.copy()
         path = self.get_path(query.get('dir', ''))
@@ -248,7 +248,7 @@ class FileBrowserAdmin(lemon.AppAdmin):
             context_instance=RequestContext(request))
 
     def upload_view(self, request):
-        from lemon.filebrowser.forms import FileUploadForm
+        from .forms import FileUploadForm
 
         query = request.GET.copy()
         path = self.get_path(query.get('dir', ''))
@@ -282,7 +282,7 @@ class FileBrowserAdmin(lemon.AppAdmin):
             context_instance=RequestContext(request))
 
     def rename_view(self, request):
-        from lemon.filebrowser.forms import RenameForm
+        from .forms import RenameForm
 
         query = request.GET.copy()
         path = self.get_path(query.get('dir', ''))
