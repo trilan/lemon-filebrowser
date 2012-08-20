@@ -2,7 +2,7 @@
 {% load i18n admin_static filebrowser_extras %}
 
 {% block extrastyle %}{{ block.super }}
-<link rel="stylesheet" type="text/css" href="{% static 'extradmin/css/changelist.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'lemon/css/changelist.css' %}" />
 <link rel="stylesheet" type="text/css" href="{% static 'filebrowser/css/style.css' %}" />
 {% endblock %}
 
@@ -10,11 +10,11 @@
 <script src="{% url admin:filebrowser:jsi18n %}" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
 // <![CDATA[
-    var path_to_yes_icon = '{% static "extradmin/images/yes.gif" %}';
-    var path_to_no_icon = '{% static "extradmin/images/no.gif" %}';
+    var path_to_yes_icon = '{% static "lemon/images/yes.gif" %}';
+    var path_to_no_icon = '{% static "lemon/images/no.gif" %}';
 // ]]>
 </script>
-<script src="{% static 'extradmin/js/jquery.changelist.js' %}" type="text/javascript" charset="utf-8"></script>
+<script src="{% static 'lemon/js/jquery.changelist.js' %}" type="text/javascript" charset="utf-8"></script>
 <script src="{% static 'filebrowser/js/jquery.browse.js' %}" type="text/javascript" charset="utf-8"></script>
 {% if is_popup %}{% include_editor_stuff editor %}{% endif %}
 {% endblock %}

@@ -1,6 +1,8 @@
 import os
 import operator
 import re
+import lemon
+
 from time import gmtime, strftime, localtime, time
 
 from dajngo.contrib import messages
@@ -14,13 +16,12 @@ from django.template.context import RequestContext
 from django.utils.translation import ugettext as _
 from django.views.i18n import javascript_catalog
 
-from lemon import extradmin
 from . import settings
 from .base import FileObject
 from .utils import query_helper
 
 
-class FileBrowserAdmin(extradmin.AppAdmin):
+class FileBrowserAdmin(lemon.AppAdmin):
 
     upload_to = 'filebrowser'
     extensions = {'Folder': [''],
@@ -389,4 +390,4 @@ class FileBrowserAdmin(extradmin.AppAdmin):
         return javascript_catalog(request, packages='lemon.filebrowser')
 
 
-extradmin.site.register_app('filebrowser', FileBrowserAdmin)
+lemon.site.register_app('filebrowser', FileBrowserAdmin)
