@@ -15,10 +15,8 @@
       <td class="fb_icon">
         {% if file.filetype != 'Folder' %}
           <a href="{% url admin:filebrowser:delete %}{% query_string %}&amp;filename={{ file.filename }}&amp;filetype={{ file.filetype }}" class="fb_file_delete_link" title="{% trans 'Delete File' %}"></a>
-        {% else %}
-          {% if file.is_empty %}
+        {% elif file.is_empty %}
             <a href="{% url admin:filebrowser:delete %}{% query_string %}&amp;filename={{ file.filename }}&amp;filetype={{ file.filetype }}" class="fb_folder_delete_link" title="{% trans 'Delete Folder' %}"></a>
-          {% endif %}
         {% endif %}
       </td>
     {% endif %}
