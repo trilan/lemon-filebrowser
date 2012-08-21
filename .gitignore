@@ -2,3 +2,4 @@
 *.pyc
 dist
 sqlite.db
+example/project/public
