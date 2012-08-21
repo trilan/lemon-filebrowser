@@ -10,7 +10,7 @@ def read(filename):
 
 setup(
     name='lemon-filebrowser',
-    version='0.1.dev',
+    version='0.1',
     license='ISC',
     description="Fork of Patrick Kranzlmueller's django-filebrowser app.",
     url='https://github.com/trilan/lemon-filebrowser',
