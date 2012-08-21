@@ -1,5 +1,6 @@
 {% extends "admin/base_site.html" %}
 {% load i18n admin_static filebrowser %}
+{% load url from future %}
 
 {% block extrastyle %}{{ block.super }}
   <link rel="stylesheet" type="text/css" href="{% static 'lemon/css/changelist.css' %}" />
@@ -7,7 +8,7 @@
 {% endblock %}
 
 {% block extrahead %}{{ block.super }}
-  <script src="{% url admin:filebrowser:jsi18n %}" type="text/javascript" charset="utf-8"></script>
+  <script src="{% url 'admin:filebrowser:jsi18n' %}" type="text/javascript" charset="utf-8"></script>
   <script type="text/javascript" charset="utf-8">
     var path_to_yes_icon = '{% static "lemon/images/yes.gif" %}';
     var path_to_no_icon = '{% static "lemon/images/no.gif" %}';
@@ -29,8 +30,8 @@
 
   {% block tools %}
     <ul class="tools">
-      <li><a href="{% url admin:filebrowser:mkdir %}{% query_string 'p' %}">{% trans "Create Folder" %}</a></li>
-      <li><a href="{% url admin:filebrowser:upload %}{% query_string 'p' %}">{% trans "Upload File" %}</a></li>
+      <li><a href="{% url 'admin:filebrowser:mkdir' %}{% query_string 'p' %}">{% trans "Create Folder" %}</a></li>
+      <li><a href="{% url 'admin:filebrowser:upload' %}{% query_string 'p' %}">{% trans "Upload File" %}</a></li>
     </ul>
   {% endblock %}
 
