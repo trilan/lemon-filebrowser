@@ -149,3 +149,11 @@ LOGGING = {
         },
     }
 }
+
+_ = lambda x: x
+
+LEMON_CONFIG = {
+    'MENU_LINKS': (
+        (_(u'File Browser'), 'admin:filebrowser:browse'),
+    ),
+}
