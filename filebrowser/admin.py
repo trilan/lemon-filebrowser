@@ -46,7 +46,7 @@ class FileBrowserAdmin(lemon.AppAdmin):
         self.sort_by = self.order_by.strip('+-')
 
     def get_urls(self):
-        from django.conf.urls.defaults import patterns, url
+        from django.conf.urls import patterns, url
         wrap = self.admin_site.admin_view
         return patterns(
             '',
