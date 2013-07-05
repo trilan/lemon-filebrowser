@@ -14,8 +14,8 @@ setup(
     license='ISC',
     description="Fork of Patrick Kranzlmueller's django-filebrowser app.",
     url='https://github.com/trilan/lemon-filebrowser',
-    author='Mike Yumatov',
-    author_email='mike@yumatov.org',
+    author='Trilan Team',
+    author_email='dev@lemon.io',
     packages=find_packages(exclude=['tests', 'tests.*']),
     include_package_data=True,
     classifiers=[
